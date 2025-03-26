@@ -1,0 +1,8 @@
+name : Run the API Automation Test 
+on: workflow_dispatch
+Jobs:
+  Demo:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Run Console Command
+        run: echo "Hello World"
