@@ -1,6 +1,6 @@
 name : Run the API Automation Test 
 on: workflow_dispatch
-Jobs:
+jobs:
   Demo:
    runs-on: ubuntu-latest
    steps:
