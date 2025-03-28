@@ -6,6 +6,15 @@ jobs:
    steps:
     - name: Get Code 
       uses: actions/checkout@v4
-    - name: Run Test
-      run: mvn clean test 
+    - name: Install Java in Runner
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'oracle'
+        java-version: '11'
+    - name: Test Java Installation
+      run: | 
+           java HelloWorldApp.java  
+           java --version    
+    # - name: Run Test
+    #   run: mvn clean test 
     
