@@ -9,7 +9,7 @@ jobs:
     - name: Install Java in Runner
       uses: actions/setup-java@v4
       with:
-        distribution: 'oracle'
+        distribution: 'jetbrains'
         java-version: '11'
     - name: Test Java Installation
       run: | 
