@@ -13,7 +13,6 @@ jobs:
         java-version: '11'
     - name: Test Java Installation
       run: | 
-           java -cp java HelloWorldApp  
            java --version    
     # - name: Run Test
     #   run: mvn clean test 
