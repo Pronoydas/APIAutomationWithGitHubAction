@@ -118,16 +118,18 @@ public class DemoTest {
 	
 	@Test(description = "Place A New Order", priority = 4 )
 	public void placeOrder() {
+		Map<String,List<Map<String, String>>> mainPaloy = new HashMap<>();
 		List<Map<String, String>> payload = new ArrayList<>();
 		Map<String, String> map = new HashMap<>();
 		map.put("country", "India");
 		map.put("productOrderedId", productId);
 		payload.add(map);
+		mainPaloy.put("orders", payload);
 		
 		orderId=RestAssured.given().spec(reqspecbuilder.build())
 		.contentType(ContentType.JSON)
 		.header("Authorization",token)
-		.body(payload)
+		.body(mainPaloy)
 		.when().post("/order/create-order")
 		.then().spec(responSpecBuilder.build()).assertThat()
 		.statusCode(201)

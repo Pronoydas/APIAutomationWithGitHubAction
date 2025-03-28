@@ -5,8 +5,8 @@
     <classes>
       <class name="apiautomation.tests.DemoTest">
         <methods>
-          <include name="getToken"/>
-          <include name="createProduct"/>
+          <include name="deletePlacedOrder"/>
+          <include name="placeOrder"/>
           <include name="buldingSpec"/>
         </methods>
       </class> <!-- apiautomation.tests.DemoTest -->
