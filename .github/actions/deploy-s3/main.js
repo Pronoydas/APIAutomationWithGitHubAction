@@ -6,7 +6,7 @@ function run() {
 // Get input from action.yml file
     const bucketName=core.getInput('bucket' ,{required: true});
     const bucketRegion=core.getInput('bucket-region' ,{required: true});
-    const distFolder=core.getInput('Test_Result' ,{required: true});
+    const distFolder=core.getInput('Test_Output' ,{required: true});
 // Upload File
     const s3Uri = `s3://${bucketName}`;
     exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion}`)

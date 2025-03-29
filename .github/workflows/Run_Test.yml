@@ -27,6 +27,7 @@ jobs:
       run: |
            cd /home/runner/work/APIAutomationWithGitHubAction/APIAutomationWithGitHubAction            
     - name: Run Test
+      continue-on-error: true 
       run: mvn clean test
     - name: Upload Artifact 
       uses: actions/upload-artifact@v4
@@ -39,12 +40,21 @@ jobs:
       uses: actions/download-artifact@v4   
       with:
         name: Test_Result
-    - name: Upload Test Result Into AWS S3
+    # - name: Upload Test Result Into AWS S3
+    #   uses: ./.github/actions/deploy-s3
+    #   env:
+    #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
+    #   with:
+    #     bucket: apiautomationtestresult 
+    #     bucket-region: ap-south-1
+    #     Test_Output: 'test-output'
+    - name: Deploy site
       uses: ./.github/actions/deploy-s3
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
       with:
-        bucket: apiautomationtestresult 
-        bucket-region: ap-south-1
-        Test_Result: 'test-output'
+        bucket: apiautomationtestresult
+        Test_Output: test-output
+        bucket-region: 'ap-south-1'

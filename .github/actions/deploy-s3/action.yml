@@ -7,7 +7,7 @@ inputs:
   bucket-region:
     description: 'The Region Name'
     required: true
-  Test_Result:
+  Test_Output:
     description: 'The Folder Contains Test Result'
     required: true     
 runs: 
