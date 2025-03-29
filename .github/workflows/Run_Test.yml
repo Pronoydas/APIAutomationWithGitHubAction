@@ -10,10 +10,10 @@ jobs:
       id:   cache
       uses: actions/cache@v4
       with:
-        path: ~/.m2/repository
+        path: ~/.m2
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
-          ${{ runner.os }}-maven-
+          ${{ runner.os }}-maven-m2
     - name: Install Java in Runner
       if : steps.cache.outputs.cache-hit != 'true'
       uses: actions/setup-java@v4
@@ -23,6 +23,6 @@ jobs:
     - name: Test Java Installation
       run: | 
            java --version    
-    # - name: Run Test
-    #   run: mvn clean test 
+    - name: Run Test
+      run: mvn clean test 
     
