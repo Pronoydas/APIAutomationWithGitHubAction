@@ -22,7 +22,10 @@ jobs:
         java-version: '11'
     - name: Test Java Installation
       run: | 
-           java --version    
+           java --version
+    - name: Change Dir 
+      run: |
+           cd /home/runner/work/APIAutomationWithGitHubAction/APIAutomationWithGitHubAction            
     - name: Run Test
       run: mvn clean test 
     
