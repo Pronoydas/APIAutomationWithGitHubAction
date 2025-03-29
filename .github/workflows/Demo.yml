@@ -1,0 +1,18 @@
+name: Demo WorkFlow
+on: workflow_dispatch
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get the code
+        uses: actions/checkout@v4
+      - name: Check dir
+        run: |
+             cd /home/runner/work/APIAutomationWithGitHubAction 
+             ls 
+             mvn --version
+      - name: Verify dir 
+        run: |
+             cd /home/runner/work/APIAutomationWithGitHubAction/APIAutomationWithGitHubAction
+             ls 
+             mvn --version
