@@ -13,6 +13,6 @@ jobs:
              mvn --version
       - name: Verify dir 
         run: |
-             cd /home/runner/work/APIAutomationWithGitHubAction/APIAutomationWithGitHubAction
+             cd /home/runner/work/APIAutomationWithGitHubAction/APIAutomationWithGitHubAction/src/test/resources/Image
              ls 
-             mvn --version
+             pwd
