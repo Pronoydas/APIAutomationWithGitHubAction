@@ -49,7 +49,7 @@ jobs:
     #     bucket: apiautomationtestresult 
     #     bucket-region: ap-south-1
     #     Test_Output: 'test-output'
-    - name: Deploy site
+    - name: Upload Test Result Into AWS S3
       uses: ./.github/actions/deploy-s3
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
