@@ -1,0 +1,15 @@
+name: 'Deploy into S3'
+description: 'Deploy a Test Result into Amazon S3'
+inputs:
+  bucket:
+    description: 'The S3 Bucket Name'
+    required: true 
+  bucket-region:
+    description: 'The Region Name'
+    required: true
+  Test_Result:
+    description: 'The Folder Contains Test Result'
+    required: true     
+runs: 
+  using: 'java11'
+  main: 'main.js'
