@@ -5,14 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get the code
-        uses: actions/checkout@v4
-      - name: Check dir
         run: |
-             cd /home/runner/work/APIAutomationWithGitHubAction 
-             ls 
-             mvn --version
-      - name: Verify dir 
-        run: |
-             cd /home/runner/work/APIAutomationWithGitHubAction/APIAutomationWithGitHubAction/src/test/resources/Image
-             ls 
-             pwd
+          echo  "AWS KEY === ${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo  "AWS SECRETS === ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+           
+             
