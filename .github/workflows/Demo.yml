@@ -8,8 +8,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Check dir
         run: |
-             pwd 
-             ls
              cd /home/runner/work/APIAutomationWithGitHubAction 
+             ls 
+             mvn --version
+      - name: Verify dir 
+        run: |
+             cd /home/runner/work/APIAutomationWithGitHubAction/APIAutomationWithGitHubAction
              ls 
              mvn --version
