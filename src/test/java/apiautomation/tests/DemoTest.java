@@ -80,7 +80,7 @@ public class DemoTest {
 		.multiPart("productPrice", "978")
 		.multiPart("productDescription","Hello World")
 		.multiPart("productFor", "All")
-		.multiPart("productImage", new File(System.getProperty("user.dir")+"\\src\\test\\resources\\Image\\Automation_needs.png"))
+		.multiPart("productImage", new File(".\\src\\test\\resources\\Image\\Automation_needs.png"))
 		.contentType(ContentType.MULTIPART)
 		.header("Authorization", token).
 	 when()

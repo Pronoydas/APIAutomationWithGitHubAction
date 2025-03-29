@@ -7,6 +7,8 @@
         <methods>
           <include name="deletePlacedOrder"/>
           <include name="placeOrder"/>
+          <include name="deleteProduct"/>
+          <include name="createProduct"/>
           <include name="buldingSpec"/>
         </methods>
       </class> <!-- apiautomation.tests.DemoTest -->
