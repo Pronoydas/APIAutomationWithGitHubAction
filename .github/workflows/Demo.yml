@@ -5,14 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get the code
-        uses: actions/checkout@v4
-      - name: Check dir
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: $ {{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-             cd /home/runner/work/APIAutomationWithGitHubAction 
-             ls 
-             mvn --version
-      - name: Verify dir 
-        run: |
-             cd /home/runner/work/APIAutomationWithGitHubAction/APIAutomationWithGitHubAction/src/test/resources/Image
-             ls 
-             pwd
+           echo $AWS_ACCESS_KEY_ID
+           echo $AWS_SECRET_ACCESS_KEY
+           
+             
