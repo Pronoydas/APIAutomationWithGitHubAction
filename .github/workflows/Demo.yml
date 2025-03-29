@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: get the code
         run: |
-          echo  "${{ secrets.AWS_ACCESS_KEY_ID }}"
-          echo  "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          echo  "AWS KEY === ${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo  "AWS SECRETS === ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
            
              
