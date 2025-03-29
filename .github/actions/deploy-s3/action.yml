@@ -11,5 +11,5 @@ inputs:
     description: 'The Folder Contains Test Result'
     required: true     
 runs: 
-  using: 'java11'
+  using: 'node20'
   main: 'main.js'
