@@ -1,4 +1,4 @@
-name : Run the API Automation Test 
+name : Run the API Automation Test | Maven CI/CD
 on: workflow_dispatch
 jobs:
   Demo:
